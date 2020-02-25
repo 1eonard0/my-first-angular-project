@@ -1,0 +1,9 @@
+<div class="card">
+    <img [src]="technology.logo" class="card-img-top img-fluid" [alt]="technology.name">
+    <div class="card-body">
+      <h5 class="card-title">{{ technology.name }}</h5>
+      <p class="card-text">{{ technology.description }}</p>
+      <p class="card-text"><small class="text-muted" *ngFor="let tag of technology.tags"><a href="#">{{ tag }}</a></small></p>
+      <a [routerLink]="['/technology', technology._id]" class="btn btn-outline-primary">See more..</a>
+    </div>
+  </div>
